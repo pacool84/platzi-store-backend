@@ -1,11 +1,12 @@
 language: node_js
+
 cache:
   directories:
     - node_modules
     - ~/.npm
-  
+
 node_js:
-  - '12'
+  - "12"
 
 git:
   depth: 3
@@ -13,16 +14,16 @@ git:
 script:
   - yarn test
 
-  notifications:
-    slack: skydevpop:Fux4VCh3dwdDAwOeUAzKRaYI
-    email:
-      recipies:
-        - flopez_1384@hotmail.com
-      on_success: always
-      on_failure: always
+notifications:
+  slack: skydevpop:Fux4VCh3dwdDAwOeUAzKRaYI
+  email:
+    reciepients:
+      - flopez_1384@hotmail.com
+    on_success: always
+    on_failure: always
 
 deploy:
-  provider: heroku
+  provide: heroku
   skip-cleanup: true
   keep-history: true
   api_key: 68dc2420-3097-4904-8a3f-870729c6abcf
